@@ -47,7 +47,7 @@ def main():
                 if area.get('ID') == str(current_area_id):
                     current_area_info = area.find_all('AreaModeStats')[sides.index(current_area_mode)]
                     current_area_deaths = int(current_area_info.get('Deaths'))
-                    current_area_time = current_area_info.get('TimePlayed')
+                    current_area_time = current_area_info.get('BestTime')
 
             streaming_text = f"{'This' if in_area else 'Last'} chapter: {format_timecode(current_area_time)}, {current_area_deaths} death{'s' if current_area_deaths != 1 else ''}" \
                              f"\nFile total: {format_timecode(total_time)}, {total_deaths} death{'s' if total_deaths != 1 else ''}"
